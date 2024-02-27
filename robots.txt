@@ -1,6 +1,5 @@
 User-agent: *
 Crawl-delay: 10
-Disallow: /
 Allow: /index.html
 Allow: /detailing.html
 Allow: /styling.html
@@ -9,4 +8,4 @@ Allow: /contact.html
 Allow: /about.html
 Allow: /sitemap.xml
 
-Sitemap: sitemap.xml 
+Sitemap: /sitemap.xml
