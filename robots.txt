@@ -7,5 +7,6 @@ Allow: /styling.html
 Allow: /service.html
 Allow: /contact.html
 Allow: /about.html
+Allow: /sitemap.xml
 
 Sitemap: sitemap.xml 
