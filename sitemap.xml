@@ -4,36 +4,40 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-<url>
-  <loc>https://tjunaz.nl/</loc>
-  <lastmod>2024-02-27T14:06:13+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://tjunaz.nl/detailing</loc>
-  <lastmod>2024-02-27T14:06:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
+  <url>
+    <loc>https://tjunaz.nl/</loc>
+    <lastmod>2024-2-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://tjunaz.nl/detailing</loc>
+    <lastmod>2024-2-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
   <loc>https://tjunaz.nl/styling</loc>
-  <lastmod>2024-02-27T14:06:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
+    <lastmod>2024-2-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
   <loc>https://tjunaz.nl/service</loc>
-  <lastmod>2024-02-27T14:06:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
+    <lastmod>2024-2-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
   <loc>https://tjunaz.nl/contact</loc>
-  <lastmod>2024-02-27T14:06:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
+    <lastmod>2024-2-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
   <loc>https://tjunaz.nl/about</loc>
-  <lastmod>2024-02-27T14:06:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
+    <lastmod>2024-2-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

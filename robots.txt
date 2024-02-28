@@ -1,11 +1,4 @@
 User-agent: *
-Crawl-delay: 10
-Allow: /index.html
-Allow: /detailing.html
-Allow: /styling.html
-Allow: /service.html
-Allow: /contact.html
-Allow: /about.html
-Allow: /sitemap.xml
+Disallow:
 
-Sitemap: /sitemap.xml
+Sitemap: https://tjunaz.nl/sitemap.xml
