@@ -3494,7 +3494,7 @@ blockquote .quote_content {
   background-color: var(--bs-gray-dark);
 }
 .product_item .item_image img {
-  max-height: 140px;
+  /* max-height: 140px; */
   -webkit-transition: var(--bs-transition);
   transition: var(--bs-transition);
 }

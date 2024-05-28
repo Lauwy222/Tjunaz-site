@@ -40,4 +40,14 @@
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
+    <loc>https://tjunaz.nl/cars</loc>
+    <lastmod>2024-05-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+    <loc>https://tjunaz.nl/cars/CLA35AMG</loc>
+    <lastmod>2024-05-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
