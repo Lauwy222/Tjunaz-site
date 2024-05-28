@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Verhuur Booking</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <form id="bookingForm">
+    <div class="form-group">
+      <label for="name">Naam</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="age">Leeftijd</label>
+      <input type="number" id="age" name="age" min="18" max="65" required>
+    </div>
+    <div class="form-group">
+      <label for="start">Boeken vanaf</label>
+      <input type="date" id="start" name="start" required>
+    </div>
+    <div class="form-group">
+      <label for="stop">Boeken tot</label>
+      <input type="date" id="stop" name="stop" required>
+    </div>
+    <div class="form-group">
+      <label for="datasom">Verwachtte kosten</label>
+      <input type="text" id="datasom" name="datasom" readonly>
+    </div>
+    <div class="form-group">
+      <label for="borg">Borg</label>
+      <input type="text" id="borg" name="borg" readonly>
+    </div>
+    <div class="form-group">
+      <label for="totaal">Totaal</label>
+      <input type="text" id="totaal" name="totaal" readonly>
+    </div>
+    <button type="submit">Verstuur</button>
+  </form>
+
+  <script>
+    document.getElementById('bookingForm').addEventListener('input', calculateCosts);
+
+    function calculateCosts() {
+      const age = parseInt(document.getElementById('age').value);
+      const start = new Date(document.getElementById('start').value);
+      const stop = new Date(document.getElementById('stop').value);
+      const dayRate = 300;
+
+      if (isNaN(age) || isNaN(start) || isNaN(stop)) {
+        return;
+      }
+
+      const days = (stop - start) / (1000 * 60 * 60 * 24);
+      const datasom = days * dayRate;
+      const borg = age < 21 ? 2000 : 1500;
+      const totaal = datasom + borg;
+
+      document.getElementById('datasom').value = `€${datasom.toFixed(2)}`;
+      document.getElementById('borg').value = `€${borg.toFixed(2)}`;
+      document.getElementById('totaal').value = `€${totaal.toFixed(2)}`;
+    }
+
+    document.getElementById('bookingForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const age = document.getElementById('age').value;
+      const start = document.getElementById('start').value;
+      const stop = document.getElementById('stop').value;
+      const datasom = document.getElementById('datasom').value;
+      const borg = document.getElementById('borg').value;
+      const totaal = document.getElementById('totaal').value;
+
+      const message = `Beste Tjunaz,
+
+Ik, ${name}, wil graag het volgende boeken:
+
+*Auto Verhuur*: Mercedes Benz CLA35AMG Sport+ Panoramadak
+*Leeftijd:* ${age}
+*Boeken vanaf:* ${start}
+*Boeken tot:* ${stop}
+*Verwachtte kosten:* ${datasom} + ${borg} = ${totaal}
+
+_(Borg word na afloop van huur periode terug gestort. Alle gemaakte boetes zijn voor eigen rekening.)_`;
+
+      const whatsappLink = `https://api.whatsapp.com/send?phone=31687528702&text=${encodeURIComponent(message)}`;
+      window.open(whatsappLink, '_blank');
+    });
+  </script>
+</body>
+</html>
