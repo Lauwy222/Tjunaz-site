@@ -4934,8 +4934,15 @@ body:has(.shop_details) .site_header .header_bottom {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.image_gallery_carousel .details_image_carousel_nav .gallery_image:hover {
+  transform: scale(1.1);
+}
 .image_gallery_carousel .details_image_carousel .gallery_image img {
   max-width: 380px;
+  transition: transform 0.3s ease; /* Add this line for smooth transition */
+}
+.image_gallery_carousel .details_image_carousel .gallery_image img:hover {
+  transform: scale(1.1);
 }
 .image_gallery_carousel .details_image_carousel_nav {
   top: 40px;
@@ -4961,6 +4968,9 @@ body:has(.shop_details) .site_header .header_bottom {
   transition: var(--bs-transition);
   background-color: var(--bs-gray-dark);
   border: 1px solid var(--bs-border-color-translucent);
+}
+.image_gallery_carousel .details_image_carousel_nav .gallery_image:hover {
+  transform: scale(1.1);
 }
 .image_gallery_carousel .details_image_carousel_nav .gallery_image:not(:last-child) {
   margin-bottom: 20px;
